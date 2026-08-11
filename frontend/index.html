@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CallSense — Analyze Call</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =========================
+         HEADER
+         ========================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <h1>CallSense</h1>
+
+                <p>
+                    AI-powered call intelligence
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="/frontend/dashboard.html"
+            class="dashboard-button"
+        >
+            View Dashboard
+            <span>→</span>
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN
+         ========================= -->
+
+    <main class="analyze-page">
+
+        <div class="hero">
+
+            <div class="eyebrow">
+                CALL ANALYSIS
+            </div>
+
+            <h2>
+                Turn conversations into
+                <span>actionable insights.</span>
+            </h2>
+
+            <p>
+                Upload a customer service call recording
+                and let AI analyze sentiment, compliance,
+                escalation risk, and agent performance.
+            </p>
+
+        </div>
+
+
+        <!-- =========================
+             UPLOAD CARD
+             ========================= -->
+
+        <section class="upload-card">
+
+            <div class="upload-icon">
+                🎧
+            </div>
+
+
+            <h3>
+                Upload a call recording
+            </h3>
+
+
+            <p class="upload-description">
+                Drag and drop your audio file here,
+                or choose a file from your computer.
+            </p>
+
+
+            <label
+                for="audioFile"
+                class="file-picker"
+            >
+
+                <span>
+                    Choose audio file
+                </span>
+
+                <small>
+                    MP3, WAV, M4A
+                </small>
+
+            </label>
+
+
+            <input
+                type="file"
+                id="audioFile"
+                accept="audio/*"
+                hidden
+            >
+
+
+            <div
+                id="fileName"
+                class="selected-file"
+            ></div>
+
+
+            <button
+                id="analyzeBtn"
+                class="analyze-button"
+            >
+                Analyze Call
+                <span>→</span>
+            </button>
+
+
+            <div
+                id="status"
+                class="status"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+             ========================= -->
+
+        <section class="feature-grid">
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ◉
+                </div>
+
+                <div>
+
+                    <strong>
+                        Sentiment Analysis
+                    </strong>
+
+                    <p>
+                        Understand customer sentiment
+                        throughout the interaction.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        Compliance Detection
+                    </strong>
+
+                    <p>
+                        Surface KYC and regulatory
+                        issues automatically.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="feature">
+
+                <div class="feature-icon">
+                    ⚡
+                </div>
+
+                <div>
+
+                    <strong>
+                        Escalation Risk
+                    </strong>
+
+                    <p>
+                        Identify calls that may require
+                        human intervention.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="/frontend/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+# Environment variables
+.env
+
+# Python virtual environment
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# macOS
+.DS_Store
+
+# Local data
+data/
+
+# Temporary files
+*.tmp
+*.temp

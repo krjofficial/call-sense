@@ -1,0 +1,1032 @@
+/* =========================================================
+   CALLSENSE — GLOBAL STYLES
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: #f5f7fb;
+    color: #172033;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   APP SHELL / HEADER
+   ========================================================= */
+
+.app-shell {
+    min-height: 100vh;
+}
+
+.topbar {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+    padding: 28px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 10px;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.brand h1 {
+    font-size: 17px;
+    font-weight: 750;
+}
+
+.brand p {
+    margin-top: 2px;
+    color: #8a92a1;
+    font-size: 11px;
+}
+
+.dashboard-button,
+.analyze-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 15px;
+
+    background: #4f46e5;
+    color: white;
+
+    border-radius: 9px;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    transition: 0.18s ease;
+}
+
+.dashboard-button:hover,
+.analyze-link:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   SHARED CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(1100px, 90%);
+    margin: 0 auto;
+    padding: 50px 0 80px;
+}
+
+
+/* =========================================================
+   SHARED TYPOGRAPHY
+   ========================================================= */
+
+.eyebrow {
+    color: #4f46e5;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 1.2px;
+}
+
+.description {
+    color: #687386;
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   ANALYZE CALL PAGE
+   ========================================================= */
+
+.analyze-page {
+    width: min(760px, 90%);
+    margin: 0 auto;
+    padding: 65px 0 80px;
+}
+
+.analyze-page header {
+    margin-bottom: 35px;
+}
+
+.analyze-page header h1 {
+    font-size: 38px;
+    font-weight: 780;
+    letter-spacing: -1.5px;
+}
+
+.analyze-page header p {
+    margin-top: 8px;
+    color: #687386;
+    font-size: 15px;
+}
+
+
+/* Upload Card */
+
+.upload-card {
+    background: white;
+
+    border: 1px solid #e3e6ee;
+    border-radius: 16px;
+
+    padding: 30px;
+
+    box-shadow:
+        0 6px 22px rgba(25, 35, 60, 0.04);
+}
+
+.upload-card h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+
+/* File Upload */
+
+.upload-box {
+    border: 2px dashed #cbd2dc;
+    border-radius: 12px;
+
+    padding: 35px;
+
+    text-align: center;
+
+    transition: 0.2s ease;
+}
+
+.upload-box:hover {
+    border-color: #6366f1;
+    background: #fafaff;
+}
+
+.upload-box input {
+    display: none;
+}
+
+.upload-box label {
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 28px;
+}
+
+.upload-box label span {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.upload-box label small {
+    color: #7a8494;
+    font-size: 13px;
+}
+
+.file-name {
+    margin-top: 15px;
+
+    color: #555f70;
+    font-size: 14px;
+}
+
+
+/* Main Button */
+
+button {
+    width: 100%;
+
+    margin-top: 20px;
+    padding: 13px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition: 0.18s ease;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+button:disabled {
+    background: #a5a9b8;
+    cursor: not-allowed;
+}
+
+.status {
+    margin-top: 15px;
+
+    color: #687386;
+
+    font-size: 13px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   DASHBOARD
+   ========================================================= */
+
+.dashboard-page {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+    padding: 50px 0 80px;
+}
+
+.dashboard-hero {
+    margin-bottom: 34px;
+}
+
+.dashboard-hero h2 {
+    margin-top: 6px;
+
+    font-size: clamp(34px, 4vw, 46px);
+    line-height: 1.08;
+
+    letter-spacing: -1.8px;
+    font-weight: 780;
+}
+
+.dashboard-hero h2 span {
+    color: #4f46e5;
+}
+
+.dashboard-hero p {
+    max-width: 650px;
+
+    margin-top: 14px;
+
+    color: #6d7789;
+
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+
+/* KPI */
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 16px;
+}
+
+.kpi-card {
+    padding: 21px;
+
+    background: white;
+
+    border: 1px solid #e3e6ee;
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 18px rgba(25, 35, 60, 0.035);
+}
+
+.kpi-label {
+    display: block;
+
+    margin-bottom: 11px;
+
+    color: #7a8494;
+
+    font-size: 11px;
+    font-weight: 650;
+}
+
+.kpi-card strong {
+    display: block;
+
+    color: #172033;
+
+    font-size: 27px;
+    font-weight: 750;
+
+    letter-spacing: -1px;
+}
+
+.kpi-card small {
+    display: block;
+
+    margin-top: 6px;
+
+    color: #9aa1ae;
+
+    font-size: 10px;
+}
+
+
+/* Dashboard Cards */
+
+.dashboard-card,
+.result-card {
+    background: white;
+
+    border: 1px solid #e3e6ee;
+    border-radius: 15px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 5px 18px rgba(25, 35, 60, 0.035);
+}
+
+.dashboard-card {
+    margin-bottom: 16px;
+}
+
+.dashboard-card h3,
+.result-card h3 {
+    color: #20293a;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.card-heading p {
+    margin-top: 6px;
+
+    color: #8a92a1;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* Call Library */
+
+.call-library {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 10px;
+}
+
+.call-library h3 {
+    margin-top: 5px;
+    font-size: 18px;
+}
+
+.call-library > div > p {
+    margin-top: 6px;
+
+    color: #7a8494;
+
+    font-size: 13px;
+}
+
+.secondary-action,
+.small-button {
+    width: auto;
+
+    min-width: 170px;
+
+    margin: 0;
+
+    padding: 11px 18px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    white-space: nowrap;
+}
+
+
+/* Dashboard Grid */
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+.dashboard-grid .dashboard-card {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CHARTS
+   ========================================================= */
+
+.bar-chart {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+
+    margin-top: 24px;
+}
+
+.chart-row {
+    display: grid;
+
+    grid-template-columns: 90px 1fr 35px;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.chart-label {
+    color: #687386;
+    font-size: 12px;
+}
+
+.chart-track {
+    height: 9px;
+
+    background: #eef0f4;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+}
+
+.chart-bar {
+    height: 100%;
+
+    min-width: 3px;
+
+    background: #4f46e5;
+
+    border-radius: 10px;
+}
+
+.chart-value {
+    color: #3c4555;
+
+    font-size: 12px;
+    font-weight: 650;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   TOPICS
+   ========================================================= */
+
+.topic-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.topic-row {
+    min-height: 43px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 13px;
+
+    background: #f7f8fa;
+
+    border: 1px solid #f0f1f4;
+
+    border-radius: 8px;
+
+    color: #3f4654;
+
+    font-size: 13px;
+
+    transition: 0.15s ease;
+}
+
+.topic-row:hover {
+    background: #f4f4ff;
+    transform: translateX(2px);
+}
+
+.topic-row strong {
+    color: #7a8494;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   CALL TABLE
+   ========================================================= */
+
+.calls-table {
+    margin-top: 18px;
+
+    overflow-x: auto;
+}
+
+.calls-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calls-table th {
+    padding: 11px 12px;
+
+    background: #fafbfc;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    color: #7a8494;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    text-align: left;
+}
+
+.calls-table td {
+    padding: 14px 12px;
+
+    border-bottom: 1px solid #f0f1f4;
+
+    color: #414958;
+
+    font-size: 13px;
+}
+
+.clickable-row {
+    cursor: pointer;
+}
+
+.clickable-row:hover {
+    background: #fafaff;
+}
+
+
+/* =========================================================
+   SENTIMENT / RISK
+   ========================================================= */
+
+.sentiment-badge {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #f1f3f5;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.risk-high,
+.risk-low {
+    font-size: 12px;
+    font-weight: 650;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+   ========================================================= */
+
+.empty-state {
+    padding: 25px;
+
+    margin-top: 15px;
+
+    background: #f8f9fb;
+
+    border: 1px dashed #dfe2e8;
+
+    border-radius: 10px;
+
+    color: #7a8494;
+
+    font-size: 13px;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CALL ANALYSIS PAGE
+   ========================================================= */
+
+.analysis-page {
+    width: min(1120px, 90%);
+    margin: 0 auto;
+
+    padding: 50px 0 80px;
+}
+
+.analysis-hero {
+    margin-bottom: 34px;
+}
+
+.analysis-hero h2 {
+    margin-top: 6px;
+
+    font-size: clamp(32px, 4vw, 44px);
+    line-height: 1.08;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 780;
+
+    word-break: break-word;
+}
+
+.analysis-hero p {
+    margin-top: 12px;
+
+    color: #6d7789;
+
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* Analysis Cards */
+
+.analysis-card {
+    padding: 25px;
+
+    margin-bottom: 16px;
+
+    background: white;
+
+    border: 1px solid #e3e6ee;
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 18px rgba(25, 35, 60, 0.035);
+}
+
+.analysis-card h3 {
+    color: #20293a;
+
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.analysis-card .card-heading {
+    margin-bottom: 4px;
+}
+
+.analysis-card .card-heading p {
+    margin-top: 6px;
+
+    color: #8a92a1;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.analysis-text {
+    margin-top: 18px;
+
+    color: #555f70;
+
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* Analysis Two-column */
+
+.analysis-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 16px;
+
+    margin-bottom: 16px;
+}
+
+.analysis-grid .analysis-card {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+.tag {
+    background: #eef2ff;
+
+    color: #4338ca;
+
+    padding: 7px 11px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 550;
+}
+
+
+/* =========================================================
+   COMPLIANCE
+   ========================================================= */
+
+#compliance {
+    margin-top: 18px;
+    padding-left: 20px;
+}
+
+#compliance li {
+    margin-bottom: 8px;
+
+    color: #555f70;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CONVERSATION
+   ========================================================= */
+
+.conversation {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 14px;
+
+    margin-top: 20px;
+}
+
+.conversation-turn {
+    display: flex;
+
+    flex-direction: column;
+
+    max-width: 75%;
+}
+
+.conversation-turn.agent {
+    align-self: flex-end;
+    align-items: flex-end;
+}
+
+.conversation-turn.customer {
+    align-self: flex-start;
+    align-items: flex-start;
+}
+
+.speaker {
+    margin-bottom: 5px;
+
+    color: #687386;
+
+    font-size: 10px;
+    font-weight: 750;
+
+    letter-spacing: 0.4px;
+
+    text-transform: uppercase;
+}
+
+.message {
+    padding: 12px 15px;
+
+    border-radius: 12px;
+
+    font-size: 13px;
+
+    line-height: 1.65;
+}
+
+.conversation-turn.agent .message {
+    background: #eef2ff;
+    color: #30356b;
+
+    border-bottom-right-radius: 4px;
+}
+
+.conversation-turn.customer .message {
+    background: #f1f3f5;
+    color: #3f4652;
+
+    border-bottom-left-radius: 4px;
+}
+
+
+/* =========================================================
+   TRANSCRIPT
+   ========================================================= */
+
+.transcript {
+    margin-top: 18px;
+
+    padding: 20px;
+
+    background: #f7f8fa;
+
+    border: 1px solid #eef0f4;
+
+    border-radius: 10px;
+
+    color: #4d5767;
+
+    font-size: 13px;
+    line-height: 1.8;
+
+    white-space: pre-wrap;
+
+    max-height: 500px;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   ANALYTICS HELPERS
+   ========================================================= */
+
+.section-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 18px;
+}
+
+.section-heading p {
+    margin-top: 5px;
+
+    color: #7a8494;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .kpi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-page,
+    .analysis-page {
+        width: 92%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .topbar {
+        width: 92%;
+    }
+
+    .dashboard-grid,
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-grid .dashboard-card,
+    .analysis-grid .analysis-card {
+        margin-bottom: 16px;
+    }
+
+    .call-library {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .secondary-action,
+    .small-button {
+        width: 100%;
+    }
+
+    .conversation-turn {
+        max-width: 88%;
+    }
+}
+
+
+@media (max-width: 500px) {
+
+    .topbar {
+        padding: 20px 0;
+    }
+
+    .brand p {
+        display: none;
+    }
+
+    .dashboard-button,
+    .analyze-link {
+        padding: 9px 12px;
+        font-size: 12px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-page,
+    .analysis-page {
+        padding-top: 40px;
+    }
+
+    .dashboard-hero h2,
+    .analysis-hero h2 {
+        font-size: 32px;
+    }
+
+    .dashboard-card,
+    .result-card,
+    .analysis-card,
+    .upload-card {
+        padding: 20px;
+    }
+
+    .conversation-turn {
+        max-width: 94%;
+    }
+}

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>CallSense — Dashboard</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+    <!-- =========================
+         TOP BAR
+         ========================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <h1>CallSense</h1>
+
+                <p>
+                    AI-powered call intelligence
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="/"
+            class="dashboard-button"
+        >
+            + Analyze Call
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         DASHBOARD
+         ========================= -->
+
+    <main class="dashboard-page">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="dashboard-hero">
+
+            <div>
+
+                <div class="eyebrow">
+                    CALL INTELLIGENCE
+                </div>
+
+                <h2>
+                    Call Center
+                    <span>Overview</span>
+                </h2>
+
+                <p>
+                    Monitor customer conversations,
+                    sentiment, compliance, and escalation
+                    risk across analyzed calls.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             KPI CARDS
+             ========================= -->
+
+        <section class="kpi-grid">
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Total Calls
+                </span>
+
+                <strong id="totalCalls">
+                    0
+                </strong>
+
+                <small>
+                    Analyzed calls
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Avg. Sentiment
+                </span>
+
+                <strong id="averageSentiment">
+                    0.00
+                </strong>
+
+                <small>
+                    Score from -1 to +1
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Escalation Rate
+                </span>
+
+                <strong id="escalationRate">
+                    0%
+                </strong>
+
+                <small>
+                    Calls requiring attention
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Compliance Issues
+                </span>
+
+                <strong id="complianceRate">
+                    0%
+                </strong>
+
+                <small>
+                    Calls with flags
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             CALL LIBRARY
+             ========================= -->
+
+        <section class="dashboard-card call-library">
+
+            <div>
+
+                <div class="eyebrow">
+                    CALL LIBRARY
+                </div>
+
+                <h3>
+                    Analyze your recordings
+                </h3>
+
+                <p>
+                    Run AI analysis across the recordings
+                    stored in your calls folder.
+                </p>
+
+            </div>
+
+
+            <button
+                id="analyzeAllBtn"
+                class="secondary-action"
+            >
+                Analyze All Calls
+                <span>→</span>
+            </button>
+
+        </section>
+
+
+        <p
+            id="dashboardStatus"
+            class="dashboard-status"
+        ></p>
+
+
+        <!-- =========================
+             CHARTS
+             ========================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- SENTIMENT -->
+
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Sentiment Distribution
+                        </h3>
+
+                        <p>
+                            Overall customer sentiment
+                            across analyzed calls.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="sentimentChart"
+                    class="bar-chart"
+                ></div>
+
+            </div>
+
+
+            <!-- ESCALATION -->
+
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <h3>
+                            Escalation Risk
+                        </h3>
+
+                        <p>
+                            Calls that may require
+                            human attention.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="riskChart"
+                    class="bar-chart"
+                ></div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             TOPICS + COMPLIANCE
+             ========================= -->
+
+        <section class="dashboard-grid">
+
+
+            <!-- TOPICS -->
+
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+
+                    <h3>
+                        Top Conversation Topics
+                    </h3>
+
+                    <p>
+                        Most frequently discussed
+                        subjects across calls.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="topicsChart"
+                    class="topic-list"
+                ></div>
+
+            </div>
+
+
+            <!-- COMPLIANCE -->
+
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+
+                    <h3>
+                        Compliance Issues
+                    </h3>
+
+                    <p>
+                        Regulatory or KYC issues
+                        detected by AI.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="complianceList"
+                    class="topic-list"
+                ></div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             CALL TABLE
+             ========================= -->
+
+        <section class="dashboard-card">
+
+            <div class="card-heading">
+
+                <h3>
+                    Analyzed Calls
+                </h3>
+
+                <p>
+                    Click a call to inspect the
+                    complete conversation.
+                </p>
+
+            </div>
+
+
+            <div
+                id="callsTable"
+                class="calls-table"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/frontend/dashboard.js"></script>
+
+</body>
+
+</html>

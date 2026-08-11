@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Call Analysis — CallSense</title>
+
+    <link
+        rel="stylesheet"
+        href="/frontend/style.css"
+    >
+
+</head>
+
+
+<body>
+
+<div class="app-shell">
+
+
+    <!-- =========================
+         TOP BAR
+         ========================= -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <div class="brand-mark">
+                CS
+            </div>
+
+            <div>
+
+                <h1>CallSense</h1>
+
+                <p>
+                    AI-powered call intelligence
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <a
+            href="/frontend/dashboard.html"
+            class="dashboard-button"
+        >
+            ← Dashboard
+        </a>
+
+    </header>
+
+
+    <!-- =========================
+         CALL ANALYSIS
+         ========================= -->
+
+    <main class="analysis-page">
+
+
+        <!-- PAGE INTRO -->
+
+        <section class="analysis-hero">
+
+            <div class="eyebrow">
+                CALL ANALYSIS
+            </div>
+
+            <h2 id="filename">
+                Loading...
+            </h2>
+
+            <p>
+                AI-generated insights from this customer
+                service conversation.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             KPI CARDS
+             ========================= -->
+
+        <section class="kpi-grid">
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Sentiment
+                </span>
+
+                <strong id="sentiment">
+                    -
+                </strong>
+
+                <small>
+                    Overall conversation tone
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Sentiment Score
+                </span>
+
+                <strong id="sentimentScore">
+                    -
+                </strong>
+
+                <small>
+                    Score from -1 to +1
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Language
+                </span>
+
+                <strong id="language">
+                    -
+                </strong>
+
+                <small>
+                    Detected call language
+                </small>
+
+            </div>
+
+
+            <div class="kpi-card">
+
+                <span class="kpi-label">
+                    Escalation Risk
+                </span>
+
+                <strong id="escalation">
+                    -
+                </strong>
+
+                <small>
+                    Follow-up required
+                </small>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             SUMMARY
+             ========================= -->
+
+        <section class="analysis-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h3>
+                        Call Summary
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="summary"
+                class="analysis-text"
+            >
+                Loading...
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             TOPICS + COMPLIANCE
+             ========================= -->
+
+        <section class="analysis-grid">
+
+
+            <!-- TOPICS -->
+
+            <div class="analysis-card">
+
+                <div class="card-heading">
+
+                    <h3>
+                        Key Topics
+                    </h3>
+
+                    <p>
+                        Main subjects discussed
+                        during the call.
+                    </p>
+
+                </div>
+
+
+                <div
+                    id="topics"
+                    class="tags"
+                ></div>
+
+            </div>
+
+
+            <!-- COMPLIANCE -->
+
+            <div class="analysis-card">
+
+                <div class="card-heading">
+
+                    <h3>
+                        Compliance Flags
+                    </h3>
+
+                    <p>
+                        Regulatory, KYC, or policy
+                        issues detected.
+                    </p>
+
+                </div>
+
+
+                <ul id="compliance"></ul>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- =========================
+             AGENT PERFORMANCE
+             ========================= -->
+
+        <section class="analysis-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h3>
+                        Agent Performance
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="agentPerformance"
+                class="analysis-text"
+            >
+                Loading...
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             CONVERSATION
+             ========================= -->
+
+        <section class="analysis-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h3>
+                        Agent vs Customer
+                    </h3>
+
+                    <p>
+                        Speaker-separated view of
+                        the conversation.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="conversation"
+                class="conversation"
+            ></div>
+
+        </section>
+
+
+        <!-- =========================
+             TRANSCRIPT
+             ========================= -->
+
+        <section class="analysis-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h3>
+                        English Transcript
+                    </h3>
+
+                    <p>
+                        Full translated transcript
+                        generated from the recording.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div
+                id="transcript"
+                class="transcript"
+            ></div>
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+<script src="/frontend/call.js"></script>
+
+</body>
+
+</html>
