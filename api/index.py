@@ -119,30 +119,47 @@ def get_calls():
 async def analyze_call(
     file: UploadFile = File(...)
 ):
+    print("====================================")
+    print("ANALYZE REQUEST RECEIVED")
+    print("Filename:", file.filename)
+    print("====================================")
 
     with tempfile.NamedTemporaryFile(
         delete=False,
         suffix=".mp3"
     ) as tmp:
 
-        tmp.write(
-            await file.read()
-        )
+        audio_data = await file.read()
+
+        print("Uploaded bytes:", len(audio_data))
+
+        tmp.write(audio_data)
 
         tmp_path = tmp.name
 
     try:
 
-        # Translate audio
+        print("STEP 1: Starting Groq translation...")
+
         translated = translate_audio(
             tmp_path
         )
 
-        # Extract insights
+        print("STEP 1 COMPLETE")
+        print("Language:", getattr(translated, "language", "unknown"))
+        print(
+            "Transcript length:",
+            len(translated.text)
+        )
+
+        print("STEP 2: Starting LLM extraction...")
+
         result = extract_insights(
             translated.text,
             translated.language
         )
+
+        print("STEP 2 COMPLETE")
 
         analysis = {
 
@@ -158,38 +175,56 @@ async def analyze_call(
                 result.model_dump()
         }
 
-        # Load existing analyses
+        print("STEP 3: Loading existing analyses...")
+
         analyses = load_analyses()
 
-        # Remove old analysis for same filename
+        print(
+            "Existing analyses:",
+            len(analyses)
+        )
+
         analyses = [
             item
             for item in analyses
             if item["filename"] != file.filename
         ]
 
-        # Add new analysis
         analyses.append(
             analysis
         )
 
-        # Save
+        print("STEP 4: Saving analyses...")
+
         save_analyses(
             analyses
         )
 
+        print("STEP 4 COMPLETE")
+
+        print("====================================")
+        print("ANALYSIS COMPLETE")
+        print("====================================")
+
         return analysis
+
+    except Exception as e:
+
+        print("====================================")
+        print("ANALYSIS ERROR")
+        print(type(e).__name__)
+        print(str(e))
+        print("====================================")
+
+        raise
 
     finally:
 
-        if os.path.exists(
-            tmp_path
-        ):
+        if os.path.exists(tmp_path):
 
-            os.remove(
-                tmp_path
-            )
+            os.remove(tmp_path)
 
+            print("Temporary file removed.")
 
 # -------------------------
 # Analyze all calls
